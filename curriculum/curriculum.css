@@ -21,41 +21,55 @@ nav {
     z-index: 1000;
 }
 
-.navbar-brand, .nav-link {
-    color: #ffffff;
-    font-weight: normal; /* Eliminar negrita */
+.elementos {
+padding-right: 4rem;
+
+}
+
+nav .logo a {
     text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem; /* Espaciado entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: normal; /* Sin negrita */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Color de hover */
 }
 
 /* Contenido principal */
 .main-content {
-    margin-top: 100px; /* Compensar espacio para el menú fijo */
-    padding: 3rem 2rem; /* Aumentamos el padding para más separación */
-}
-
-/* Sección principal de contenido */
-.main-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem; /* Aumentar el margen inferior */
-}
-
-.main-content p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-top: 100px; /* Compensar el espacio del menú fijo */
+    padding: 3rem 2rem;
 }
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
-    .main-content h1 {
-        font-size: 2rem;
-    }
-
     nav ul {
         justify-content: center;
+        gap: 1rem; /* Reducir el espaciado en pantallas pequeñas */
     }
-
-    nav ul li {
-        margin: 0.5rem;
+    .main-content {
+        padding: 2rem;
     }
 }
+
