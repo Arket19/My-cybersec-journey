@@ -127,7 +127,7 @@ nav ul li a {
     margin-top: 2rem; /* Añadir algo de espacio entre la presentación y las columnas */
     width: 80%; /* Asegurar que ocupe todo el ancho disponible */
     box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
-    margin-left: 40vh !important;
+    margin-left: 40vh;
 }
 
 /* Las columnas */
@@ -209,9 +209,10 @@ nav ul li a {
 
     .second-half {
         flex-direction: column; /* Apilar todo en vertical */
-        width: 90%; /* Reducir ancho en móviles */
+        width: 100%; /* Reducir ancho en móviles */
         margin: 0 auto; /* Centrar contenido */
         gap: 2rem; /* Espacio entre secciones */
+        margin-left: 0;
     }
 
     .column {
