@@ -4,7 +4,8 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #121212; /* Fondo oscuro */
     color: #ffffff; /* Texto en blanco */
-    text-align: center; /* Centrar texto */
+    overflow: hidden; /* Evita scroll por las animaciones */
+    position: relative; /* Necesario para el contenedor */
 }
 
 /* Menú de navegación */
@@ -22,8 +23,7 @@ nav {
 }
 
 .elementos {
-padding-right: 4rem;
-
+    padding-right: 5rem;
 }
 
 nav .logo a {
@@ -53,23 +53,89 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00bcd4; /* Color de hover */
+    color: #00ff00; /* Color de hover */
 }
 
-/* Contenido principal */
-.main-content {
-    margin-top: 100px; /* Compensar el espacio del menú fijo */
-    padding: 3rem 2rem;
+/* Sección de presentación (primera mitad) */
+.presentation {
+    text-align: justify; /* Justificar texto */
+    width: 60%; /* Ocupa dos tercios del ancho de la pantalla */
+    margin: 0 auto; /* Centrar la presentación */
+    height: 35vh; /* La mitad de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
-/* Ajustes responsivos */
+.presentation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #00ff00;
+}
+
+.presentation p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Sección inferior dividida en dos columnas */
+.second-half {
+    display: flex; /* Activar el diseño de flexbox */
+    justify-content: center; /* Centrar las columnas horizontalmente */
+    align-items: flex-start; /* Alinear las columnas en la parte superior */
+    height: 50vh; /* Ocupa la mitad inferior de la pantalla */
+    margin-top: 2rem; /* Añadir algo de espacio entre la presentación y las columnas */
+    width: 80%; /* Asegurar que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+    margin-left: 40vh !important;
+}
+
+/* Las columnas */
+.column {
+    flex: 0 1 45%; /* Ambas columnas ocupan hasta el 45% del ancho y no se expanden más */
+    padding: 2rem;
+    text-align: justify; /* Justificar texto */
+    line-height: 1.6; /* Espaciado entre líneas para mayor legibilidad */
+    margin: 0 1rem; /* Espacio lateral entre las columnas */
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+
+}
+
+/* Títulos de las columnas */
+.column h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00ff00;
+}
+
+/* Estilo de las listas dentro de las columnas */
+.column ul {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.column ul li {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    nav ul {
-        justify-content: center;
-        gap: 1rem; /* Reducir el espaciado en pantallas pequeñas */
+    .second-half {
+        flex-direction: column; /* En pantallas pequeñas, las columnas se apilan */
+        justify-content: center; /* Alinear al centro cuando las columnas se apilen */
     }
-    .main-content {
-        padding: 2rem;
+    
+    .column {
+        max-width: 90%; /* Las columnas ocupan la mayor parte del ancho disponible */
+        margin: 1rem 0; /* Añadir margen entre las columnas en vista apilada */
+    }
+    
+    .presentation {
+        height: auto; /* La presentación puede ocupar toda la altura disponible en pantallas pequeñas */
+        width: 90%; /* Asegurarse de que el contenido no quede demasiado estrecho */
     }
 }
-
