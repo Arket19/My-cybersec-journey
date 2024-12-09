@@ -1,38 +1,73 @@
+/* Fonts */
+.alumni-sans-pinstripe-regular {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-style: normal;
+}
+.alumni-sans-pinstripe-regular-italic {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-style: italic;
+  }
+.roboto-serif{
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "GRAD" 0;
+  }
+  
+
+/* Estilos de letras */
+.titulos-milestones{
+    text-decoration: underline;
+    font-weight: bold;
+    padding-left: 8rem;
+}
+.links{
+    color: #ff9e2e;
+    cursor: pointer;
+}
+
+
+
+
 /* Estilos generales */
 body {
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #121212; /* Fondo oscuro */
-    color: #ffffff; /* Texto en blanco */
+    background-color: #1f1f1f; /* Fondo oscuro */
     overflow: hidden; /* Evita scroll por las animaciones */
     position: relative; /* Necesario para el contenedor */
 }
 
-/* Menú de navegación */
+
+
+
+/* Estilos del menú */
 nav {
-    background-color: #1a1a1a; /* Fondo del menú */
+    background-color: #313131; /* Fondo del menú */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
-
-.elementos {
+.elementos-menu{
     padding-right: 5rem;
 }
-
-nav .logo a {
-    text-decoration: none;
+.titulo-web{
     color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: normal;
 }
-
+nav .logo a {
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding-left: 2rem;
+}
 nav ul {
     list-style-type: none;
     display: flex;
@@ -40,11 +75,9 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-
 nav ul li {
     margin: 0;
 }
-
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
@@ -52,9 +85,14 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #00ff00; /* Color de hover */
-}
+
+
+
+
+
+
+
+
 
 /* Sección de presentación (primera mitad) */
 .presentation {
@@ -65,14 +103,14 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 2rem;
+    color: #ffffff; /* Texto en blanco */
 }
 
 .presentation h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     text-align: center;
-    color: #00ff00;
+    color: #ffffff;
 }
 
 .presentation p {
@@ -107,7 +145,7 @@ nav ul li a:hover {
 .column h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #00ff00;
+    color: #ffffff;
 }
 
 /* Estilo de las listas dentro de las columnas */
