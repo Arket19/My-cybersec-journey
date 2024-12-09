@@ -10,7 +10,7 @@
 .roboto-serif{
     font-family: "Roboto Serif", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 400;
     font-style: normal;
     font-variation-settings:
       "wdth" 100,
@@ -161,19 +161,68 @@ nav ul li a {
 }
 
 /* Ajustes para pantallas pequeñas */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    .second-half {
-        flex-direction: column; /* En pantallas pequeñas, las columnas se apilan */
-        justify-content: center; /* Alinear al centro cuando las columnas se apilen */
+    body {
+        overflow: auto; /* Permitir scroll en móviles si es necesario */
     }
-    
-    .column {
-        max-width: 90%; /* Las columnas ocupan la mayor parte del ancho disponible */
-        margin: 1rem 0; /* Añadir margen entre las columnas en vista apilada */
+    nav {
+        flex-direction: column; /* Apilar los elementos del menú */
+        align-items: flex-start; /* Alinear al inicio */
+        padding: 1rem;
     }
-    
+    .elementos-menu {
+        display: flex;
+        flex-direction: column; /* Apilar los elementos del menú */
+        padding-right: 0;
+        gap: 1rem;
+    }
+    nav ul {
+        flex-direction: column; /* Apilar los elementos del menú */
+        gap: 1rem; /* Reducir el espacio entre los enlaces */
+    }
+    nav ul li a {
+        font-size: 1rem; /* Ajustar tamaño del texto */
+    }
+
     .presentation {
-        height: auto; /* La presentación puede ocupar toda la altura disponible en pantallas pequeñas */
-        width: 90%; /* Asegurarse de que el contenido no quede demasiado estrecho */
+        width: 90%; /* Reducir el ancho para que encaje mejor */
+        margin: 1rem auto; /* Centrar horizontalmente y añadir espacio arriba/abajo */
+        height: auto; /* Ajustar automáticamente la altura */
+    }
+    .presentation h2 {
+        font-size: 2rem; /* Reducir el tamaño del título */
+    }
+    .presentation p {
+        font-size: 0.9rem; /* Reducir tamaño del texto */
+        line-height: 1.4; /* Ajustar espacio entre líneas */
+    }
+
+    .second-half {
+        flex-direction: column; /* Apilar las columnas */
+        justify-content: center; /* Centrar las columnas */
+        align-items: center; /* Alinear al centro */
+        height: auto; /* Ajustar automáticamente la altura */
+        margin-left: 0; /* Eliminar margen izquierdo */
+        width: 90%; /* Reducir el ancho total */
+    }
+
+    .column {
+        width: 100%; /* Las columnas ocupan todo el ancho */
+        margin: 1rem 0; /* Añadir espacio entre columnas */
+        padding: 1rem; /* Reducir el padding */
+    }
+
+    .column h2 {
+        font-size: 1.5rem; /* Reducir tamaño de los títulos */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .column ul {
+        padding-left: 1rem; /* Ajustar el padding de las listas */
+    }
+
+    .column ul li {
+        font-size: 0.9rem; /* Reducir tamaño del texto */
     }
 }
