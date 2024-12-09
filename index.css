@@ -161,68 +161,80 @@ nav ul li a {
 }
 
 /* Ajustes para pantallas pequeñas */
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
+    /* Evitar scroll horizontal */
     body {
-        overflow: auto; /* Permitir scroll en móviles si es necesario */
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
+
     nav {
-        flex-direction: column; /* Apilar los elementos del menú */
-        align-items: flex-start; /* Alinear al inicio */
+        flex-direction: column; /* Apilar el menú */
+        align-items: center; /* Centrar los elementos del menú */
         padding: 1rem;
     }
+
     .elementos-menu {
         display: flex;
-        flex-direction: column; /* Apilar los elementos del menú */
-        padding-right: 0;
-        gap: 1rem;
+        flex-direction: column; /* Apilar enlaces */
+        padding: 0;
+        gap: 1rem; /* Espacio entre enlaces */
+        align-items: center;
     }
+
     nav ul {
-        flex-direction: column; /* Apilar los elementos del menú */
-        gap: 1rem; /* Reducir el espacio entre los enlaces */
-    }
-    nav ul li a {
-        font-size: 1rem; /* Ajustar tamaño del texto */
+        flex-direction: column; /* Apilar los enlaces del menú */
+        width: 100%; /* Ocupan todo el ancho disponible */
+        gap: 1rem;
     }
 
     .presentation {
-        width: 90%; /* Reducir el ancho para que encaje mejor */
-        margin: 1rem auto; /* Centrar horizontalmente y añadir espacio arriba/abajo */
+        width: 90%; /* Ajustar ancho para móviles */
+        margin: 1rem auto; /* Centrar horizontalmente */
         height: auto; /* Ajustar automáticamente la altura */
     }
+
     .presentation h2 {
-        font-size: 2rem; /* Reducir el tamaño del título */
+        font-size: 2rem; /* Ajustar tamaño del título */
+        margin-bottom: 1rem;
+        text-align: center;
     }
+
     .presentation p {
-        font-size: 0.9rem; /* Reducir tamaño del texto */
-        line-height: 1.4; /* Ajustar espacio entre líneas */
+        font-size: 1rem; /* Texto más pequeño */
+        line-height: 1.5;
+        text-align: justify;
     }
 
     .second-half {
-        flex-direction: column; /* Apilar las columnas */
-        justify-content: center; /* Centrar las columnas */
-        align-items: center; /* Alinear al centro */
-        height: auto; /* Ajustar automáticamente la altura */
-        margin-left: 0; /* Eliminar margen izquierdo */
-        width: 90%; /* Reducir el ancho total */
+        flex-direction: column; /* Apilar todo en vertical */
+        width: 90%; /* Reducir ancho en móviles */
+        margin: 0 auto; /* Centrar contenido */
+        gap: 2rem; /* Espacio entre secciones */
     }
 
     .column {
-        width: 100%; /* Las columnas ocupan todo el ancho */
-        margin: 1rem 0; /* Añadir espacio entre columnas */
-        padding: 1rem; /* Reducir el padding */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 0; /* Eliminar márgenes */
+        padding: 0; /* Ajustar padding */
     }
 
     .column h2 {
-        font-size: 1.5rem; /* Reducir tamaño de los títulos */
-        text-align: center; /* Centrar el texto */
+        font-size: 1.8rem; /* Reducir tamaño del título */
+        margin-bottom: 0.5rem;
+        text-align: center; /* Centrar título */
     }
 
     .column ul {
-        padding-left: 1rem; /* Ajustar el padding de las listas */
+        padding: 0; /* Eliminar padding lateral */
+        margin: 0; /* Eliminar márgenes */
     }
 
     .column ul li {
-        font-size: 0.9rem; /* Reducir tamaño del texto */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        text-align: justify;
     }
 }
