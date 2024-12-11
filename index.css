@@ -18,73 +18,62 @@
   }
   
 
-/* Estilos de letras */
-.titulos-milestones{
-    text-decoration: underline;
-    font-weight: bold;
-    padding-left: 8rem;
-}
-.links{
-    color: #ff9e2e;
-    cursor: pointer;
-}
 
 
-
-
-/* Estilos generales */
+/* General */
 body {
-    margin: 0;
-    font-family: 'Roboto', Arial, sans-serif;
-    background-color: #1f1f1f; /* Fondo oscuro */
-    overflow: hidden; /* Evita scroll por las animaciones */
-    position: relative; /* Necesario para el contenedor */
-}
-
-
-
-
-/* Estilos del menú */
-nav {
-    background-color: #313131; /* Fondo del menú */
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    top: 0;
-    width: 100%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-.elementos-menu{
-    padding-right: 5rem;
-}
-.titulo-web{
-    color: #ffffff;
-}
-nav .logo a {
-    font-size: 2.3rem;
-    font-weight: bold;
-    padding-left: 2rem;
-}
-nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 2rem; /* Espaciado entre los elementos */
+    font-family: 'Roboto Serif', serif;
+    background-color: #222222; /* Fondo negro */
+    color: white; /* Texto claro */
     margin: 0;
     padding: 0;
 }
-nav ul li {
-    margin: 0;
+
+
+
+
+
+
+/* Barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo del menú */
+    color: white;
+    padding: 5px 10px; /* Menor altura */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrar verticalmente */
+    height: 5rem;
 }
+
+nav .logo a {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    font-weight: normal; /* Sin negrita */
+    color: white;
     transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #00bcd4;
+}
 
 
 
@@ -94,158 +83,82 @@ nav ul li a {
 
 
 
-/* Sección de presentación (primera mitad) */
+
+
+
+/* Presentación */
 .presentation {
-    text-align: justify; /* Justificar texto */
-    width: 60%; /* Ocupa dos tercios del ancho de la pantalla */
-    margin: 0 auto; /* Centrar la presentación */
-    height: 35vh; /* La mitad de la altura de la pantalla */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #ffffff; /* Texto en blanco */
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%; /* Ocupa dos tercios */
+    color: white;
 }
 
 .presentation h2 {
-    font-size: 3.5rem;
-    font-weight:bolder !important;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #ffffff;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 auto; /* Centrarlo */
 }
 
 .presentation p {
-    font-size: 1rem;
-    line-height: 1.6;
+    margin-top: 20px;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-
-
-
-
-
-
-/* Sección inferior dividida en dos columnas */
+/* Milestones y Next Steps */
 .second-half {
-    display: flex; /* Activar el diseño de flexbox */
-    justify-content: center; /* Centrar las columnas horizontalmente */
-    align-items: flex-start; /* Alinear las columnas en la parte superior */
-    height: 50vh; /* Ocupa la mitad inferior de la pantalla */
-    margin-top: 2rem; /* Añadir algo de espacio entre la presentación y las columnas */
-    width: 80%; /* Asegurar que ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
-    margin-left: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10rem;
+    gap: 20px;
+
+
 }
-/* Las columnas */
+
 .column {
-    flex: 0 1 45%; /* Ambas columnas ocupan hasta el 45% del ancho y no se expanden más */
-    padding: 2rem;
-    text-align: justify; /* Justificar texto */
-    line-height: 1.6; /* Espaciado entre líneas para mayor legibilidad */
-    margin: 0 1rem; /* Espacio lateral entre las columnas */
-    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+    width: 100rem;
+    background-color: white; /* Fondo blanco */
+    color: black; /* Texto negro */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
 
 }
-/* Títulos de las columnas */
-.column h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-}
-/* Estilo de las listas dentro de las columnas */
-.column ul {
-    list-style-type: circle;
-    padding-left: 1.5rem;
-    margin: 1rem 0;
-}
-.column ul li {
-    margin-bottom: 0.5rem;
-    color: #ffffff;
+
+.titulos-milestones {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: black; /* Texto negro */
 }
 
-
-
-
-
-
-
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    /* Evitar scroll horizontal */
-    body {
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav {
-        flex-direction: column; /* Apilar el menú */
-        align-items: center; /* Centrar los elementos del menú */
-        padding: 1rem;
-    }
-
-    .elementos-menu {
-        display: flex;
-        flex-direction: column; /* Apilar enlaces */
-        padding: 0;
-        gap: 1rem; /* Espacio entre enlaces */
-        align-items: center;
-    }
-
+/* Responsividad */
+@media screen and (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Apilar los enlaces del menú */
-        width: 100%; /* Ocupan todo el ancho disponible */
-        gap: 1rem;
-    }
-
-    .presentation {
-        width: 90%; /* Ajustar ancho para móviles */
-        margin: 1rem auto; /* Centrar horizontalmente */
-        height: auto; /* Ajustar automáticamente la altura */
-    }
-
-    .presentation h2 {
-        font-size: 2rem; /* Ajustar tamaño del título */
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-
-    .presentation p {
-        font-size: 1rem; /* Texto más pequeño */
-        line-height: 1.5;
-        text-align: justify;
+        flex-direction: column;
     }
 
     .second-half {
-        flex-direction: column; /* Apilar todo en vertical */
-        width: 100%; /* Reducir ancho en móviles */
-        margin: 0 auto; /* Centrar contenido */
-        gap: 2rem; /* Espacio entre secciones */
-        margin-left: 0;
+        flex-direction: column;
     }
 
     .column {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        margin: 0; /* Eliminar márgenes */
-        padding: 0; /* Ajustar padding */
+        max-width: 100%;
     }
 
-    .column h2 {
-        font-size: 1.8rem; /* Reducir tamaño del título */
-        margin-bottom: 0.5rem;
-        text-align: center; /* Centrar título */
+    .presentation h2 {
+        font-size: 2rem;
     }
 
-    .column ul {
-        padding: 0; /* Eliminar padding lateral */
-        margin: 0; /* Eliminar márgenes */
-    }
-
-    .column ul li {
-        font-size: 1rem;
-        line-height: 1.5;
-        margin-bottom: 0.5rem;
-        text-align: justify;
+    nav .logo a {
+        font-size: 1.6rem;
     }
 }
